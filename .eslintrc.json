@@ -1,0 +1,28 @@
+{
+    "plugins": [
+      "@oursky",
+      "prettier"
+    ],
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:@oursky/eslint",
+      "plugin:@oursky/oursky",
+      "plugin:@oursky/typescript",
+      "plugin:@oursky/tsdoc",
+      "plugin:@oursky/react",
+      "plugin:@oursky/react-hooks",
+      "plugin:prettier/recommended"
+    ],
+    "rules": {
+      "@typescript-eslint/ban-tslint-comment": ["off"],
+      "react-hooks/exhaustive-deps": ["error", {
+        "additionalHooks": "(useEffectSkipFirst)"
+      }]
+    },
+    "parserOptions": {
+      "sourceType": "module",
+      "project": "./tsconfig.json"
+    }
+  }
+  
