@@ -1,10 +1,38 @@
 {
     "version": "1.0.0",
     "manifest_version": 3,
-    "name": "React Chrome Extension",
-    "description": "This is a Chrome extension built with React and TypeScript",
+    "name": "KSC Programme Autofiller",
+    "description": "This is a Chrome extension to help applying KSC courses",
+    "author": "king.mementomori@gmail.com",
     "action": {
-        "default_popup": "js/index.html",
-        "default_title": "React Chrome Extension"
+        "default_popup": "./index.html",
+        "default_title": "KSC Autofiller"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "./static/js/content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "storage"
+    ],
+    "host_permissions": [
+        "*://*/*",
+        "*://www.kscgolf.org.hk/*",
+        "*://kscgolf.org.hk/*"
+    ],
+    "icons": {
+        "16": "logo16.png",
+        "32": "logo32.png",
+        "48": "logo48.png",
+        "128": "logo128.png"
     }
 }

@@ -1,23 +1,28 @@
 {
   "name": "ksc-autofiller",
   "version": "0.1.0",
+  "author": "KingDev",
   "private": true,
   "devDependencies": {
+    "@oursky/eslint-plugin": "11.1.0",
+    "@testing-library/jest-dom": "5.17.0",
+    "@testing-library/react": "13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/chrome": "^0.0.267",
     "@types/jest": "27.5.2",
     "@types/node": "20.12.7",
     "@types/react": "18.3.1",
     "@types/react-dom": "^18.3.0",
-    "@testing-library/jest-dom": "5.17.0",
-    "@testing-library/react": "13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@oursky/eslint-plugin": "11.1.0",
     "eslint-config-prettier": "8.6.0",
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-simple-import-sort": "10.0.0",
+    "nodemon": "^3.1.0",
     "prettier": "2.8.3"
   },
   "dependencies": {
+    "@craco/craco": "^7.1.0",
+    "@fluentui/react-components": "^9.49.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-scripts": "5.0.1",
@@ -25,11 +30,12 @@
     "web-vitals": "2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build && yarn run window-copy",
+    "start": "react-scripts start && copy",
+    "build": "craco build && yarn run copy",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "window-copy": "xcopy .\\manifest.json .\\build\\manifest.json /k /y"
+    "window-copy": "xcopy .\\manifest.json .\\build\\manifest.json /k /y",
+    "copy": "cp ./manifest.json ./build/manifest.json"
   },
   "browserslist": {
     "production": [

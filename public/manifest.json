@@ -8,14 +8,39 @@
       "type": "image/x-icon"
     },
     {
+      "src": "logo16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "logo32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "logo48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "logo128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
       "src": "logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "lokky.jpg",
+      "type": "image/jpg",
+      "sizes": "1020x1020"
+    },
+    {
+      "src": "bg.jpg",
+      "type": "image/jpg",
+      "sizes": "4904x3241"
     }
   ],
   "start_url": ".",

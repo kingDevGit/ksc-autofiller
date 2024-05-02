@@ -1,9 +1,22 @@
 import React from "react";
 import "./App.css";
+import { RendererProvider, FluentProvider } from "@fluentui/react-components";
+import { createFluentRenderer, createThemes } from "./factories/fluent-ui";
+import MainPage from "./pages/MainPage/MainPage";
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-function App() {
-  return <div className="App">Hello World</div>;
+const fluentRenderer = createFluentRenderer();
+const theme = createThemes();
+
+function App(): React.ReactElement {
+  return (
+    <RendererProvider renderer={fluentRenderer}>
+      <FluentProvider theme={theme.light}>
+        <div className="container">
+          <MainPage />
+        </div>
+      </FluentProvider>
+    </RendererProvider>
+  );
 }
 
 export default App;
