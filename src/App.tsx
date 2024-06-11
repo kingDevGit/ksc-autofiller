@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { RendererProvider, FluentProvider } from "@fluentui/react-components";
 import { createFluentRenderer, createThemes } from "./factories/fluent-ui";
-import MainPage from "./pages/MainPage/MainPage";
+import AppRouter from "./router/AppRouter";
 
 const fluentRenderer = createFluentRenderer();
 const theme = createThemes();
@@ -12,7 +12,7 @@ function App(): React.ReactElement {
     <RendererProvider renderer={fluentRenderer}>
       <FluentProvider theme={theme.light}>
         <div className="container">
-          <MainPage />
+          <AppRouter />
         </div>
       </FluentProvider>
     </RendererProvider>

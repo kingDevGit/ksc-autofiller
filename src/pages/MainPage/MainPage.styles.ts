@@ -10,45 +10,15 @@ export const useStyles = makeStyles({
     backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url("./bg.jpg")`,
     backgroundSize: "200%",
   },
+  container: {},
+  button: {
+    marginLeft: tokens.spacingHorizontalXS,
+    marginRight: tokens.spacingHorizontalXS,
+  },
   headerBar: {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
     marginBottom: tokens.spacingVerticalXXL,
-  },
-
-  content: {
-    display: "flex",
-    flexDirection: "column",
-    rowGap: tokens.spacingVerticalL,
-  },
-  select: {
-    maxWidth: "300px",
-    paddingTop: tokens.spacingVerticalS,
-    paddingBottom: tokens.spacingVerticalS,
-  },
-
-  imageContainer: {
-    display: "flex",
-    marginRight: tokens.spacingHorizontalXXXL,
-    maxWidth: "100px",
-  },
-  textBubble: {
-    display: "block",
-    position: "absolute",
-  },
-
-  textInput: {
-    display: "flex",
-    flexDirection: "column",
-    rowGap: "5px",
-    maxWidth: "300px",
-    paddingTop: tokens.spacingVerticalS,
-    paddingBottom: tokens.spacingVerticalS,
-  },
-
-  button: {
-    marginLeft: tokens.spacingHorizontalXS,
-    marginRight: tokens.spacingHorizontalXS,
   },
 });
