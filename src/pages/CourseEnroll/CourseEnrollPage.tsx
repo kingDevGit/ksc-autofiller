@@ -3,12 +3,15 @@
 /* eslint-disable react/jsx-no-bind */
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useStyles } from "./CourseEnrollPage.styles";
-import { Button, Input, Label, Select, Text } from "@fluentui/react-components";
+import { Button, Input, Label, Select } from "@fluentui/react-components";
 import { ApiResponse } from "../../types/ApiResponse";
 import { Message } from "../../types/Message";
 import { getLocalStorage, setLocalStorage } from "../../chromeServices/storage";
 import { Profile } from "../../types/PersonalData";
 import LokkyHeadComponent from "../../components/lokky-head/LokkyHeadComponent";
+import { useNavigate } from "react-router-dom";
+import { MAIN_PAGE_ROUTE } from "../MainPage/MainPage";
+import PathRecordComponent from "../../components/path-record/PathRecordComponent";
 
 export const COURSE_ENROLL_ROUTE = "/course-enroll";
 
@@ -17,6 +20,7 @@ const enrollUrlPattern =
 
 const CourseEnrollPage: React.VFC = React.memo(() => {
   const styles = useStyles();
+  const navigate = useNavigate();
 
   const [currentUrl, setCurrentUrl] = useState("");
 
@@ -272,8 +276,15 @@ const CourseEnrollPage: React.VFC = React.memo(() => {
 
   return (
     <div className={styles.root}>
+      <PathRecordComponent />
       <div className={styles.headerBar}>
-        <Text>LL Sponsor Club 課程報名輔助</Text>
+        <Button
+          appearance="primary"
+          className={styles.button}
+          onClick={() => navigate(MAIN_PAGE_ROUTE)}
+        >
+          回到主頁
+        </Button>
 
         <Button
           appearance="primary"

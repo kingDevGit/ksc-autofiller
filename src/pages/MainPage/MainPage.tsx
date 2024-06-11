@@ -6,6 +6,7 @@ import { Button, Text } from "@fluentui/react-components";
 import LokkyHeadComponent from "../../components/lokky-head/LokkyHeadComponent";
 import { useNavigate } from "react-router-dom";
 import { COURSE_ENROLL_ROUTE } from "../CourseEnroll/CourseEnrollPage";
+import PathRecordComponent from "../../components/path-record/PathRecordComponent";
 
 export const MAIN_PAGE_ROUTE = "/home";
 
@@ -15,6 +16,7 @@ const MainPage: React.VFC = React.memo(() => {
 
   return (
     <div className={styles.root}>
+      <PathRecordComponent />
       <div className={styles.headerBar}>
         <Text>LL Sponsor Club 工具</Text>
 

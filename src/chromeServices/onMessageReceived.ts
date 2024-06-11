@@ -11,7 +11,7 @@ export const onMessageReceived = (
   sender: chrome.runtime.MessageSender,
   sendResponse: (response: ApiResponse) => void
 ): void => {
-  console.log("[ChromeService]. Message received", msg);
+  console.log("[ChromeService] Message received", msg);
 
   if (msg.type === "GET_DOM") {
     const currentUrl = window.location.href;
@@ -23,7 +23,6 @@ export const onMessageReceived = (
   }
 
   if (msg.type === "REDIRECT") {
-    console.log("Redirect");
     window.location.replace(
       "https://www.kscgolf.org.hk/learn/adults-programme/"
     );
